@@ -38,10 +38,6 @@ with col2:
 
 ph_target = st.number_input("Target pH", min_value=0.0, step=0.01, value=7.25, format="%.2f", help="Enter the desired target pH value")
 
-# Display equations
-st.subheader("Equations")
-st.latex(r"\frac{VD}{VT} = \frac{PaCO_2 - EtCO_2}{PaCO_2}")
-st.latex(r"\Delta \text{pH} = 0.08 \times \left( \frac{PaCO_2 - 40}{10} \right) \quad \text{(Acute)}")
 
 # Display results
 st.subheader("Results")
@@ -58,5 +54,9 @@ try:
 except ZeroDivisionError:
     st.error("Error: Division by zero. Please check your inputs.")
 
+# Display equations
+st.subheader("Equations")
+st.latex(r"\frac{VD}{VT} = \frac{PaCO_2 - EtCO_2}{PaCO_2}")
+st.latex(r"\Delta \text{pH} = 0.08 \times \left( \frac{PaCO_2 - 40}{10} \right) \quad \text{(Acute)}")
+
 # References
-st.caption("Reference: Kallet RH. The Physiologic Basis of Mechanical Ventilation. In: Tobin MJ, editor. Principles and Practice of Mechanical Ventilation. 3rd ed. New York: McGraw-Hill; 2013. p. 1-20.")

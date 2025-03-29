@@ -29,12 +29,21 @@ st.title("Creatinine Clearance Calculator")
 col1, col2 = st.columns(2)
 
 with col1:
-    weight_kg = st.number_input("Enter weight (kg):", min_value=0.1, step=0.1, value=60.0)
-    age_years = st.number_input("Enter age (years):", min_value=1.0, step=1.0, value=60.0)
+    weight_kg = st.number_input("Enter weight (kg):", min_value=0.1, step=0.1, value=72.0)
+    age_years = st.number_input("Enter age (years):", min_value=1, step=1, value=60)
 
 with col2:
-    serum_creatinine_mg_dl = st.number_input("Enter serum creatinine (mg/dL):", min_value=0.1, step=0.01, value=0.7)
+    serum_creatinine_mg_dl = st.number_input("Enter serum creatinine (mg/dL):", min_value=0.1, step=0.01, value=0.8)
     gender = st.selectbox("Select gender:", options=["Male", "Female"])
+
+
+# Display results
+st.subheader("Results")
+try:
+    crcl = calculate_creatinine_clearance(weight_kg, age_years, serum_creatinine_mg_dl, gender)
+    st.write(f"**Estimated Creatinine Clearance:** `{crcl:.2f} mL/min`")
+except ValueError as e:
+    st.error(str(e))
 
 # Display the Cockcroft-Gault equation using LaTeX
 st.subheader("Equations")
@@ -44,14 +53,6 @@ st.latex(r"""
 {72 \times \text{Serum Creatinine (mg/dL)}}
 """)
 st.caption("Where Factor is 1.0 for males and 0.85 for females.")
-
-# Display results
-st.subheader("Results")
-try:
-    crcl = calculate_creatinine_clearance(weight_kg, age_years, serum_creatinine_mg_dl, gender)
-    st.write(f"**Estimated Creatinine Clearance:** `{crcl:.2f} mL/min`")
-except ValueError as e:
-    st.error(str(e))
 
 # References
 st.caption("Reference: Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.")
