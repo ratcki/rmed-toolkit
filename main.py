@@ -1,11 +1,19 @@
 import streamlit as st
-from multiapp import MultiApp
-from pages import etco2_calculator
 
-# Initialize the multi-page app
-app = MultiApp()
+st.set_page_config(page_title="rMED ToolKit", page_icon=":hospital:")
 
-# Add pages
-app.add_app("Home", lambda: st.write("Welcome to R MED toolkits"))
-app.add_app("EtCO2 Target Calculator", etco2_calculator.app)
-app.run()
+st.header('rMED ToolKit')
+
+st.markdown(
+    """
+    The rMED ToolKit is a comprehensive application designed to assist healthcare professionals during internal medicine ward rounds.
+    
+    **👈 Use the sidebar to navigate through the toolkit's features**, which include:
+    - EtCO2 Target Calculator
+    ### Key Features:
+    - Toolkit for ward rounds
+    ### Learn More:
+    - Visit our [documentation](https://example.com/documentation)
+    - Join our [community forums](https://example.com/forums) to share feedback and ideas
+"""
+)
