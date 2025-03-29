@@ -41,7 +41,7 @@ with col2:
 st.subheader("Results")
 try:
     crcl = calculate_creatinine_clearance(weight_kg, age_years, serum_creatinine_mg_dl, gender)
-    st.write(f"**Estimated Creatinine Clearance:** `{crcl:.2f} mL/min`")
+    st.write(f"**Estimated Creatinine Clearance:** `{crcl:.2f}` mL/min")
 except ValueError as e:
     st.error(str(e))
 

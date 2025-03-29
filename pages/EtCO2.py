@@ -45,8 +45,8 @@ try:
     paco2_target, etco2_target, vd_vt, vd = calculate_target_etco2(paco2, etco2, ph, ph_target, vt)
     col1, col2 = st.columns(2)
     with col1:
-        st.write(f"**Target PaCO2:** `{paco2_target:.2f} mmHg`")
-        st.write(f"**Target EtCO2:** `{etco2_target:.2f} mmHg`")
+        st.write(f"**Target PaCO2:** `{paco2_target:.2f}` mmHg")
+        st.write(f"**Target EtCO2:** `{etco2_target:.2f}` mmHg")
 
     with col2:
         st.write(f"Vd/Vt: {vd_vt:.2f}")

@@ -72,13 +72,16 @@ try:
     with col2:
         # Calculate infusion rate for a dose of 0.1 mcg/kg/min
         infusion_rate = calculate_infusion_rate(0.1, drug_mg, volume_ml, body_weight_kg)
-        st.write(f"**Dose 0.1 mcg/kg/min:** `{infusion_rate:.2f} ml/hr`")
+        st.write(f"**Dose 0.1 mcg/kg/min = Rate** `{infusion_rate:.2f}` ml/hr")
         # Calculate infusion rate for a dose of 0.25 mcg/kg/min
         infusion_rate = calculate_infusion_rate(0.25, drug_mg, volume_ml, body_weight_kg)
-        st.write(f"**Dose 0.25 mcg/kg/min:** `{infusion_rate:.2f} ml/hr`")
+        st.write(f"**Dose 0.25 mcg/kg/min = Rate** `{infusion_rate:.2f}` ml/hr")
+        # Calculate infusion rate for a dose of 1 mcg/kg/min
+        infusion_rate = calculate_infusion_rate(1, drug_mg, volume_ml, body_weight_kg)
+        st.write(f"**Dose 1 mcg/kg/min = Rate** `{infusion_rate:.2f}` ml/hr")
         # Calculate infusion rate for a dose of 2 mcg/kg/min
         infusion_rate = calculate_infusion_rate(2, drug_mg, volume_ml, body_weight_kg)
-        st.write(f"**Dose 2 mcg/kg/min:** `{infusion_rate:.2f} ml/hr`")
+        st.write(f"**Dose 2 mcg/kg/min = Rate** `{infusion_rate:.2f}` ml/hr")
 except ZeroDivisionError:
     st.error("Error: Division by zero. Please check your inputs.")
 
