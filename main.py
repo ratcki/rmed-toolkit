@@ -10,6 +10,7 @@ st.markdown(
     
     **👈 Use the sidebar to navigate through the toolkit's features**, which include:
     - EtCO2 Target Calculator
+    - Cockcroft-Gault CrCl Calculator
     ### Key Features:
     - Toolkit for ward rounds
     ### Disclaimer:
