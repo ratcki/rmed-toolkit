@@ -12,8 +12,12 @@ st.markdown(
     - EtCO2 Target Calculator
     ### Key Features:
     - Toolkit for ward rounds
-    ### Learn More:
-    - Visit our [documentation](https://example.com/documentation)
-    - Join our [community forums](https://example.com/forums) to share feedback and ideas
+    ### Disclaimer:
+    - This tool is intended to assist with medical management but should not replace clinical judgment. 
+    - Always double-check calculations and recommendations before applying them in practice.
+    ### Contact Me:
+    - Developer: Ratchapoom Kittiwattanasarn, MD
+    - Email: poom9544@gmail.com
+    
 """
 )
